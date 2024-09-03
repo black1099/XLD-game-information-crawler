@@ -37,11 +37,12 @@ scrapy crawl dm3
 scrapy crawl youxia
 ```
 ---
-## 数据生成
+## 配置修改
+### settings.py
 
-默认数据名为news.json
+`JSON_FILE_NAME = "news.json" # 修改生成数据的文件名称`
 
-可在game_news中的settings.py更改JSON_FILE_NAME选项来更换保存的文件名
+`SPIDER_MAX_PAGES = 10 # 修改最大爬取的页数`
 
 ---
 
