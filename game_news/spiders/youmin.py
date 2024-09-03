@@ -32,7 +32,7 @@ class YouminSpider(scrapy.Spider):
 
         page = response.meta["page"] + 1
         url = f'https://db2.gamersky.com/LabelJsonpAjax.aspx?jsondata={{"type":"updatenodelabel", "nodeId":"11007", "page":{page} }}'
-        if page < self.settings.get("SPIDER_MAX_PAGES", 50):
+        if page <= self.settings.get("SPIDER_MAX_PAGES", 50):
             yield scrapy.Request(
                 url=url,
                 callback=self.parse,
